@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--Introducimos el atributo ng-app de angular con la que podremos definir modulo-->
+<html ng-app="aplicacion">
+    <head>
+        <meta charset="utf-8" />
+        <!--Introducimos el titulo de la pagina -->
+        <title> Registro del préstamo de libros de la biblioteca </title>
+        <!--Llamamos al nuestro css que en mi caso es bootstrap.min.css que hemos descargado de la pagina web-->
+        <link type="text/css" href="/stylesheets/bootstrap.min.css" rel="stylesheet"/>
+        <script type="text/javascript" src="/javascripts/angular.min.js"></script>
+        <script type="text/javascript" src="/javascripts/funciones.js"></script>
+    </head>
+    <body>
+        <!--Con la siguiente sentencia haremos referencia al controlador definido como Libros-->
+        <div class="container" ng-controller="Libros">
+            <h1> Biblioteca </h1>
+            <form action="javascript:void(0);">
+                <div class="row">
+                    <div class="span4">
+                        <label> Nombre del Libro </label>
+                        <!--En cada input con el atributo ng-model vincularemos el campo con la propieda de dicho campo ($scope.)
+                        Esto lo realizaremos para cada uno de los campos que querramos pedir para nuestra archivo de prestamos 
+                        de la biblioteca-->
+                        <input type="text" ng-model="nombredellibro" />
+                    </div>
+                    <div class="span4">                    
+                        <label> Fecha vencimiento </label>
+                        <input type="text" ng-model="fechavencimiento" />
+                    </div>
+                    <div class="span4">
+                        <label> Préstamo realizado por </label>
+                        <input type="text" ng-model="prestamorealizadopor" />
+                    </div>
+                    <div class="span4">
+                        <label> Dirección </label>
+                        <input type="text" ng-model="direccion" />
+                    </div> 
+                    <!--Utilizamos ngclick ya que con este atributo hacemos referencia a onclick. En estas dos sentencias 
+                        llamaremos a las funciones de guardar prestamos cuando pulsemos la opcion de guardar (sumit) y llamaremos a limpiarprestamo
+                        cuando pulsemos el boton (button) de limpiar-->
+                        <input type="submit" value="Guardar" class="btn btn-success" ng-click="guardarprestamo()" />
+                        <input type="button" value="Limpiar" class="btn btn-danger" ng-click="limpiarprestamo()" />
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Nombre del libro </th>
+                        <th> Fecha vencimiento </th>
+                        <th> Préstamo realizado por </th>
+                        <th> Direccion </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Con el atributo ngrepeat recorreremos el array de libros,
+                    asi cuando actualizamos este array de cambiará también directamente en nuestro html-->
+                    <tr ng-repeat="item in libros">
+                        <td> {{item.nombredellibro}} </td>
+                        <td> {{item.fechavencimiento}} </td>
+                        <td> {{item.prestamorealizadopor}} </td>
+                        <td> {{item.direccion}} </td>
+                        <td> <a href="javascript:void(0);" class="btn btn-info" ng-click="recuperarprestamo($index)"> Editar Prestamo </a> </td>
+                        <td> <a href="javascript:void(0);" class="btn btn-danger" ng-click="eliminarprestamo($index)"> Eliminar Prestamo </a> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

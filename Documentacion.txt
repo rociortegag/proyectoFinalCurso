@@ -1,0 +1,21 @@
+*Documentación:
+
+La aplicación realizada para el proyecto final de curso es un registro de los préstamos
+realizados en una biblioteca siguiendo en la tematica del anterior ejercicio. 
+Como campos definidos en nuestro registro tendremos: 
+	-Nombre del libro
+	-Fecha de vencimiento
+	-Persona que realiza el prestamo
+	-Direccion de la persona.
+	-Telefono
+
+Dentro de nuestro registros tendremos la posibilidad de guardar el préstamos, limpiar los 
+campos del registro, Editar el préstamo y por último limpiar el préstamo realizado.
+
+Para el desarrollo de esta aplicación he utilizado angular ya que con ella podemos trabajar
+de forma separada en el front. Además de añadir bootstrap.min.css para obtender de ella 
+nuestro style ya que es más sencillo que desarrollar enteramente la interfaz.
+
+Para el correcto funcionamiento de la aplicacion he añadido el módulo express.
+Utilizamos scope ya que gracias a el podremos asignar las propiedades y los
+metodos que declaremos a nuestro controlador.
