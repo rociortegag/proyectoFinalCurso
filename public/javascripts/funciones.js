@@ -5,7 +5,7 @@ aplicacion.controller('Libros', function($scope) {
     
     /*Creamos los campos que guardaremos de cada libro
      * Para cada controlador tendremos dos parametros su propio nombre y utilizaremos
-     * una función callback a la cual le pasaremos el scope como parametro ($scope)
+     * una funciÃ³n callback a la cual le pasaremos el scope como parametro ($scope)
     */
    //_id identifica la posicion del libro
     $scope._id = null;
@@ -16,7 +16,7 @@ aplicacion.controller('Libros', function($scope) {
     /*Declaramos nuestro array de esta manera para que se vayan almacenando los libros
      * cuando los vayamos introduciendo
      */
-    $scope.libros = 
+    $scope.libros = [];
             
     //Funcion que guarda o modifica el prestamo que se realiza
     $scope.guardarprestamo = function() {
@@ -45,7 +45,7 @@ aplicacion.controller('Libros', function($scope) {
         $scope.prestamorealizadopor = '';
         $scope.direccion = '';
     };
-    //Cuando llamamos a la función recuperar prestamo obtenemos la informacion del prestamo que quedamos modificar
+    //Cuando llamamos a la funciÃ³n recuperar prestamo obtenemos la informacion del prestamo que quedamos modificar
     $scope.recuperarprestamo = function(index) {
         $scope._id = index;
         $scope.nombredellibro = $scope.libros[index].nombredellibro;
@@ -53,7 +53,7 @@ aplicacion.controller('Libros', function($scope) {
         $scope.prestamorealizadopor = $scope.libros[index].prestamorealizadopor;
         $scope.direccion = $scope.libros[index].direccion;
     };
-    //Funcion que elimina los prestamos según el indice
+    //Funcion que elimina los prestamos segÃºn el indice
     $scope.eliminarprestamo = function(indice) {
         var libros_actualizado = [];
         for (var i = 0; i < $scope.libros.length; i++) {
