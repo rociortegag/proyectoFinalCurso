@@ -1,6 +1,6 @@
-*DocumentaciÛn:
+*Documentaci√≥n:
 
-La aplicaciÛn realizada para el proyecto final de curso es un registro de los prÈstamos
+La aplicaci√≥n realizada para el proyecto final de curso es un registro de los pr√©stamos
 realizados en una biblioteca siguiendo en la tematica del anterior ejercicio. 
 Como campos definidos en nuestro registro tendremos: 
 	-Nombre del libro
@@ -9,13 +9,17 @@ Como campos definidos en nuestro registro tendremos:
 	-Direccion de la persona.
 	-Telefono
 
-Dentro de nuestro registros tendremos la posibilidad de guardar el prÈstamos, limpiar los 
-campos del registro, Editar el prÈstamo y por ˙ltimo limpiar el prÈstamo realizado.
+Dentro de nuestro registros tendremos la posibilidad de guardar el pr√©stamos, limpiar los 
+campos del registro, Editar el pr√©stamo y por √∫ltimo limpiar el pr√©stamo realizado.
 
-Para el desarrollo de esta aplicaciÛn he utilizado angular ya que con ella podemos trabajar
-de forma separada en el front. Adem·s de aÒadir bootstrap.min.css para obtender de ella 
-nuestro style ya que es m·s sencillo que desarrollar enteramente la interfaz.
+Para el desarrollo de esta aplicaci√≥n he utilizado angular ya que con ella podemos trabajar
+de forma separada en el front. Adem√°s de a√±adir bootstrap.min.css para obtender de ella 
+nuestro style ya que es m√°s sencillo que desarrollar enteramente la interfaz.
 
-Para el correcto funcionamiento de la aplicacion he aÒadido el mÛdulo express.
+Para el correcto funcionamiento de la aplicacion he a√±adido el m√≥dulo express.
 Utilizamos scope ya que gracias a el podremos asignar las propiedades y los
 metodos que declaremos a nuestro controlador.
+
+Para ejecutar nuestra aplicaci√≥n debemos introducir:
+		
+		node app.js
